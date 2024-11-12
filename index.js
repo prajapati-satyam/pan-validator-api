@@ -10,7 +10,8 @@ import apiRouter from './routes/apiRouter.js'
 app.use('/api', apiRouter)
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html');
+    // res.sendFile('index.html');
+    res.sendFile(path.resolve("public", "index.html"));
 });
 
 app.listen(port, () => {
