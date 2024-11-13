@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve("public", "index.html"));
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
-});
+try {
+
+    app.listen(port, () => {
+        console.log(`Example app listening on port ${port}`);
+    });
+} catch(err) {
+    console.log('error in server listening : ', err);
+}
